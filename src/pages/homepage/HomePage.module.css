@@ -1,0 +1,24 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.speechBubble {
+  margin-right: 200px;
+}
+
+.zoom {
+  margin-top: 1000px;
+  transition: transform 0.2s; /* Animation */
+  width: auto;
+  height: 230px;
+  position: fixed;
+}
+
+.zoom:hover {
+  transform: scale(
+    2
+  ); /* (200% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
