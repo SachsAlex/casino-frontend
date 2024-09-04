@@ -2,9 +2,18 @@ import React from "react";
 import "./styles/App.css";
 import "./styles/Globals.css";
 import HomePage from "./pages/homepage";
+import { Route, Routes } from "react-router-dom";
+import LogInPage from "./pages/login";
+import SignUpPage from "./pages/signup";
 
 function App() {
-  return <HomePage />;
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<LogInPage />} />
+      <Route path="/signup" element={<SignUpPage />} />
+    </Routes>
+  );
 }
 
 export default App;

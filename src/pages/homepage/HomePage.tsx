@@ -3,18 +3,30 @@ import guy from "../../mediathek/images/[removal.ai]_49894e9d-3c96-47f6-8cab-c61
 import { useState } from "react";
 import Button from "../../components/common/buttons";
 import "@fontsource/tenor-sans";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
   const [speechBubble, setSpeechBubble] = useState(false);
+  const [bigGuy, setBigGuy] = useState(false);
+
+  const navigate = useNavigate();
+
+  const redirectToLogin = () => {
+    navigate("/login");
+  };
+  const redirectToSignUp = () => {
+    navigate("/signup");
+  };
 
   function onClick() {
     setSpeechBubble(!speechBubble);
+    setBigGuy(!bigGuy);
   }
 
   return (
     <div className={styles.mainContainer}>
       <img
-        className={styles.zoom}
+        className={`${styles.zoom} ${bigGuy ? styles.enlarged : ""}`}
         src={guy}
         alt="Typ"
         onClick={() => onClick()}
@@ -23,18 +35,20 @@ function HomePage() {
         <div className={styles.speechBubble}>
           <div className={styles.welcome}>
             Willkommen beim Casino MCXL.
-            <div>
-              Bitte zeigen Sie Ihren Ausweis (
-              <Button onClick={onClick} text="SignUp" id="1" className="" />)
-              <div>
-                oder Ihre Mitgliedskarte (
-                <Button onClick={onClick} text="LogIn" id="2" className="" />
-                ).
-              </div>
-            </div>
+            <Button
+              onClick={redirectToSignUp}
+              text="Bitte zeigen Sie Ihren Ausweis (SignUp)"
+              id="1"
+              className=""
+            />
+            <Button
+              onClick={redirectToLogin}
+              text="oder Ihre Mitgliedskarte (LogIn)."
+              id="2"
+              className=""
+            />
           </div>
         </div>
-        // <Button onClick={onClick} text="Hallo Welt" id="1" className="" />
       )}
     </div>
   );

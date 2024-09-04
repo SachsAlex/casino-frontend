@@ -1,4 +1,4 @@
-import styles from "./HomePage.module.css";
+import styles from "./LogInPage.module.css";
 
 function LogInPage() {
   return <div className={styles.mainContainer}></div>;

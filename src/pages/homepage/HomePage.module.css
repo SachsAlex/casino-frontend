@@ -1,3 +1,10 @@
+body {
+  background-image: url("../../mediathek/images/Eingangneu.webp");
+  background-position: top;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -9,7 +16,7 @@
   margin-left: 450px;
   margin-top: 680px;
   position: absolute;
-  background-color: blanchedalmond;
+  background-color: var(--primary-color);
   border-radius: 15px;
   padding: 12px;
 }
@@ -22,7 +29,7 @@
   width: 0;
   height: 0;
   border: 30px solid transparent;
-  border-right-color: blanchedalmond;
+  border-right-color: var(--primary-color);
   border-left: 0;
   border-bottom: 0;
   margin-top: 4px;
@@ -41,11 +48,14 @@
   width: auto;
   height: 230px;
   position: absolute;
-  z-index: 99;
 }
 
 .zoom:hover {
   transform: scale(
     2
   ); /* (200% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.zoom.enlarged {
+  transform: scale(2);
 }
