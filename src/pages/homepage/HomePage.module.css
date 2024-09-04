@@ -6,17 +6,42 @@
 }
 
 .speechBubble {
-  margin-right: 200px;
+  margin-left: 450px;
+  margin-top: 680px;
   position: absolute;
-  background-color: aqua;
+  background-color: blanchedalmond;
+  border-radius: 15px;
+  padding: 12px;
+}
+
+.speechBubble:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 30px solid transparent;
+  border-right-color: blanchedalmond;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: 4px;
+  margin-left: -17px;
+}
+
+.welcome {
+  font-size: medium;
+  font-family: "Tenor Sans", sans-serif;
 }
 
 .zoom {
   margin-top: 950px;
+
   transition: transform 0.2s; /* Animation */
   width: auto;
   height: 230px;
   position: absolute;
+  z-index: 99;
 }
 
 .zoom:hover {
