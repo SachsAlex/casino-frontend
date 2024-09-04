@@ -34,7 +34,7 @@ function HomePage() {
       {speechBubble && (
         <div className={styles.speechBubble}>
           <div className={styles.welcome}>
-            Willkommen beim Casino MCXL.
+            <div className={styles.space}> Willkommen beim Casino MCXL. </div>
             <Button
               onClick={redirectToSignUp}
               text="Bitte zeigen Sie Ihren Ausweis (SignUp)"

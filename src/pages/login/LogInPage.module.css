@@ -1,3 +1,36 @@
-.mainContainer {
-  background-image: none;
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  margin: 160px 280px;
+  border-radius: 16px;
+  border: 3px solid lightgrey;
+  backdrop-filter: blur(3px);
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgb(150, 150, 140);
+  padding: 4px 4px;
+  border-radius: 6px;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+}
+.buttonplus {
+  padding: 3px 6px;
+}
+.input {
+  border-radius: 6px;
+  text-align: center;
 }
