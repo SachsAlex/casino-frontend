@@ -8,6 +8,7 @@
 .speechBubble {
   margin-right: 200px;
   position: absolute;
+  background-color: aqua;
 }
 
 .zoom {
