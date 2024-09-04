@@ -35,7 +35,7 @@
 }
 
 .zoom {
-  margin-top: 950px;
+  margin-top: 63%;
 
   transition: transform 0.2s; /* Animation */
   width: auto;
