@@ -7,14 +7,15 @@
 
 .speechBubble {
   margin-right: 200px;
+  position: absolute;
 }
 
 .zoom {
-  margin-top: 1000px;
+  margin-top: 950px;
   transition: transform 0.2s; /* Animation */
   width: auto;
   height: 230px;
-  position: fixed;
+  position: absolute;
 }
 
 .zoom:hover {
