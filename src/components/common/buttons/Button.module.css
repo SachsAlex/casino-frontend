@@ -1,11 +1,13 @@
 .myBtn {
   width: fit-content;
-  padding: 3px 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1px;
   border-radius: 8px;
   color: black;
   background-color: var(--primary-color);
   cursor: pointer;
   &:hover {
-    background-color: green;
+    background-color: var(--secondary-color);
   }
 }

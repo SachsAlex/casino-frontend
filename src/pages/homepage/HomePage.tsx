@@ -2,7 +2,6 @@ import styles from "./HomePage.module.css";
 import guy from "../../mediathek/images/Carsten05b2.webp";
 import { useState } from "react";
 import Button from "../../components/common/buttons";
-import "@fontsource/tenor-sans";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
@@ -24,32 +23,39 @@ function HomePage() {
   }
 
   return (
-    <div className={styles.mainContainer}>
-      <img
-        className={`${styles.zoom} ${bigGuy ? styles.enlarged : ""}`}
-        src={guy}
-        alt="Typ"
-        onClick={() => onClick()}
-      />
-      {speechBubble && (
-        <div className={styles.speechBubble}>
-          <div className={styles.welcome}>
-            <div className={styles.space}> Willkommen beim Casino MCXL. </div>
-            <Button
-              onClick={redirectToSignUp}
-              text="Bitte zeigen Sie Ihren Ausweis (SignUp)"
-              id="1"
-              className=""
-            />
-            <Button
-              onClick={redirectToLogin}
-              text="oder Ihre Mitgliedskarte (LogIn)."
-              id="2"
-              className=""
-            />
+    <div className={styles.background}>
+      <div className={styles.mainContainer}>
+        <img
+          className={`${styles.zoom} ${bigGuy ? styles.enlarged : ""}`}
+          src={guy}
+          alt="Typ"
+          onClick={() => onClick()}
+        />
+        {speechBubble && (
+          <div className={styles.spacer}>
+            <div className={styles.speechBubble}>
+              <div className={styles.welcome}>
+                <div className={styles.space}>
+                  {" "}
+                  Willkommen beim Casino MCXL.{" "}
+                </div>
+                <Button
+                  onClick={redirectToSignUp}
+                  text="Bitte zeigen Sie Ihren Ausweis (SignUp)"
+                  id="1"
+                  className=""
+                />
+                <Button
+                  onClick={redirectToLogin}
+                  text="oder Ihre Mitgliedskarte (LogIn)."
+                  id="2"
+                  className=""
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

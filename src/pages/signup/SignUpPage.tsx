@@ -28,8 +28,6 @@ function SignUpPage() {
   //   try {
   //     const profile = await AuthMutations.createUser(
   //       newUserName,
-  //       newVorName,
-  //       newNachName,
   //       newEmail,
   //       newPassword
   //     );
@@ -42,58 +40,60 @@ function SignUpPage() {
   // };
 
   return (
-    <div className={styles.outerContainer}>
-      <div className={styles.innerContainer}>
-        <br />
-        <label>Username</label>
-        <input
-          className={styles.input}
-          type="text"
-          placeholder="Username"
-          // value={newUserName}
-          // onChange={e => setNewUserName(e.target.value)}
-        />
-        <label>E-Mail</label>
-        <input
-          className={styles.input}
-          type="email"
-          placeholder="E-Mail Adresse"
-          // value={newEmail}
-          // onChange={e => setNewEmail(e.target.value)}
-        />
-        <label>Passwort</label>
-        <input
-          className={styles.input}
-          type="password"
-          placeholder="Passwort"
-          // value={newPassword}
-          // onChange={e => setNewPassword(e.target.value)}
-        />
-        <label>Passwort wiederholen</label>
-        <input
-          className={styles.input}
-          type="password"
-          placeholder="Passwort wiederholen"
-          // value={confirmPassword}
-          // onChange={e => setConfirmPassword(e.target.value)}
-        />
-        {/* {error && <p>{error}</p>} */}
-        <br />
-        <div className={styles.button}>
-          <Button
-            text={"Bestätigen"}
-            onClick={handleConfirm}
-            id=""
-            className={styles.buttonplus}
+    <div className={styles.background}>
+      <div className={styles.outerContainer}>
+        <div className={styles.innerContainer}>
+          <br />
+          <label>Username</label>
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Username"
+            // value={newUserName}
+            // onChange={e => setNewUserName(e.target.value)}
           />
-          <Button
-            text={"Abbrechen"}
-            onClick={handleCancel}
-            id=""
-            className={styles.buttonplus}
+          <label>E-Mail</label>
+          <input
+            className={styles.input}
+            type="email"
+            placeholder="E-Mail Adresse"
+            // value={newEmail}
+            // onChange={e => setNewEmail(e.target.value)}
           />
+          <label>Passwort</label>
+          <input
+            className={styles.input}
+            type="password"
+            placeholder="Passwort"
+            // value={newPassword}
+            // onChange={e => setNewPassword(e.target.value)}
+          />
+          <label>Passwort wiederholen</label>
+          <input
+            className={styles.input}
+            type="password"
+            placeholder="Passwort wiederholen"
+            // value={confirmPassword}
+            // onChange={e => setConfirmPassword(e.target.value)}
+          />
+          {/* {error && <p>{error}</p>} */}
+          <br />
+          <div className={styles.button}>
+            <Button
+              text={"Bestätigen"}
+              onClick={handleConfirm}
+              id=""
+              className={styles.buttonplus}
+            />
+            <Button
+              text={"Abbrechen"}
+              onClick={handleCancel}
+              id=""
+              className={styles.buttonplus}
+            />
+          </div>
+          <br />
         </div>
-        <br />
       </div>
     </div>
   );

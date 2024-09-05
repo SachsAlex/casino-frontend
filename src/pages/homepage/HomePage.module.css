@@ -1,8 +1,13 @@
-body {
+.background {
   background-image: url("../../mediathek/images/Eingangneu.webp");
   background-position: top;
   background-size: 100vw 100vh;
+  height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainContainer {
@@ -13,8 +18,8 @@ body {
 }
 
 .speechBubble {
-  margin-left: 450px;
-  margin-top: 680px;
+  display: flex;
+  flex-direction: row;
   position: absolute;
   background-color: var(--primary-color);
   border-radius: 15px;
@@ -42,11 +47,16 @@ body {
 }
 
 .space {
-  padding-left: 6px;
+  padding-left: 4px;
+}
+
+.spacer {
+  padding-left: 120px;
+  padding-bottom: 100px;
 }
 
 .zoom {
-  margin-top: 140vh;
+  margin-top: 45vh;
   transition: transform 0.2s; /* Animation */
   width: auto;
   height: 180px;

@@ -26,45 +26,47 @@ function LogInPage() {
   };
 
   return (
-    <div className={styles.outerContainer}>
-      <div className={styles.innerContainer}>
-        <br />
-        <label>E-Mail:</label>
-        <input
-          className={styles.input}
-          // onSubmit={handleLogin}
-          placeholder="E-Mail"
-          type="E-Mail"
-          // value={userName}
-          // onChange={e => setUsername(e.target.value)}
-          required
-        />
-
-        <label>Password: </label>
-        <input
-          className={styles.input}
-          placeholder="Password"
-          type="password"
-          // value={password}
-          // onChange={e => setPassword(e.target.value)}
-          required
-        />
-        <br />
-        <div className={styles.button}>
-          <Button
-            text={"Bestätigen"}
-            onClick={handleConfirm}
-            id=""
-            className={styles.buttonplus}
-          />{" "}
-          <Button
-            text={"Abbrechen"}
-            onClick={handleCancel}
-            id=""
-            className={styles.buttonplus}
+    <div className={styles.background}>
+      <div className={styles.outerContainer}>
+        <div className={styles.innerContainer}>
+          <br />
+          <label>E-Mail:</label>
+          <input
+            className={styles.input}
+            // onSubmit={handleLogin}
+            placeholder="E-Mail"
+            type="E-Mail"
+            // value={userName}
+            // onChange={e => setUsername(e.target.value)}
+            required
           />
+
+          <label>Password: </label>
+          <input
+            className={styles.input}
+            placeholder="Password"
+            type="password"
+            // value={password}
+            // onChange={e => setPassword(e.target.value)}
+            required
+          />
+          <br />
+          <div className={styles.button}>
+            <Button
+              text={"Bestätigen"}
+              onClick={handleConfirm}
+              id=""
+              className={styles.buttonplus}
+            />{" "}
+            <Button
+              text={"Abbrechen"}
+              onClick={handleCancel}
+              id=""
+              className={styles.buttonplus}
+            />
+          </div>
+          <br />
         </div>
-        <br />
       </div>
     </div>
   );

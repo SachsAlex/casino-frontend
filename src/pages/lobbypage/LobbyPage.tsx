@@ -4,11 +4,13 @@ import "@fontsource/tenor-sans";
 
 function LobbyPage() {
   return (
-    <div className={styles.mainContainer}>
-      <img className={styles.guy2} src={guy2} alt="Typ" />
-      <div className={styles.speechBubble}>
-        <div className={styles.welcome}>
-          <div className={styles.space}> Willkommen beim Casino MCXL. </div>
+    <div className={styles.background}>
+      <div className={styles.mainContainer}>
+        <img className={styles.guy2} src={guy2} alt="Typ" />
+        <div className={styles.speechBubble}>
+          <div className={styles.welcome}>
+            <div className={styles.space}> Willkommen beim Casino MCXL. </div>
+          </div>
         </div>
       </div>
     </div>
