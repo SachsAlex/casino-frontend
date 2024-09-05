@@ -46,10 +46,10 @@ body {
 }
 
 .zoom {
-  margin-top: 63%;
+  margin-top: 140vh;
   transition: transform 0.2s; /* Animation */
   width: auto;
-  height: 230px;
+  height: 180px;
   position: absolute;
 }
 

@@ -1,5 +1,5 @@
 import styles from "./HomePage.module.css";
-import guy from "../../mediathek/images/[removal.ai]_49894e9d-3c96-47f6-8cab-c61a0955949b-_07e49ec1-e963-4d2e-9c35-771ebe298fd8b2.png";
+import guy from "../../mediathek/images/Carsten05b2.webp";
 import { useState } from "react";
 import Button from "../../components/common/buttons";
 import "@fontsource/tenor-sans";
