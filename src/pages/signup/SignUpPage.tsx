@@ -16,6 +16,10 @@ function SignUpPage() {
     navigate("/");
   };
 
+  const handleConfirm = () => {
+    navigate("/lobby");
+  };
+
   // const handleSignup = async () => {
   //   if (newPassword !== confirmPassword) {
   //     setError("Passwörter stimmen nicht überein");
@@ -78,7 +82,7 @@ function SignUpPage() {
         <div className={styles.button}>
           <Button
             text={"Bestätigen"}
-            onClick={handleCancel}
+            onClick={handleConfirm}
             id=""
             className={styles.buttonplus}
           />

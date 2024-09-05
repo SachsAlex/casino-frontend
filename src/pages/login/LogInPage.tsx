@@ -20,6 +20,11 @@ function LogInPage() {
   const handleCancel = () => {
     navigate("/");
   };
+
+  const handleConfirm = () => {
+    navigate("/lobby");
+  };
+
   return (
     <div className={styles.outerContainer}>
       <div className={styles.innerContainer}>
@@ -48,7 +53,7 @@ function LogInPage() {
         <div className={styles.button}>
           <Button
             text={"Bestätigen"}
-            onClick={handleCancel}
+            onClick={handleConfirm}
             id=""
             className={styles.buttonplus}
           />{" "}
