@@ -1,8 +1,13 @@
 .background {
-  background-image: url("../../mediathek/images/Eingangneu.webp");
+  background-image: url("../../mediathek/images/inside06.webp");
   background-position: top;
   background-size: 100vw 100vh;
+  height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainContainer {
@@ -13,9 +18,11 @@
 }
 
 .speechBubble {
-  margin-left: 450px;
-  margin-top: 680px;
+  display: flex;
+  flex-direction: row;
   position: absolute;
+  margin-top: -25vh;
+  margin-left: 4vw;
   background-color: var(--primary-color);
   border-radius: 15px;
   padding: 12px;
@@ -24,16 +31,16 @@
 .speechBubble:after {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   top: 50%;
   width: 0;
   height: 0;
   border: 30px solid transparent;
-  border-right-color: var(--primary-color);
-  border-left: 0;
+  border-left-color: var(--primary-color);
+  border-right: 0;
   border-bottom: 0;
-  margin-top: 4px;
-  margin-left: -17px;
+  margin-top: -50px;
+  margin-right: -17px;
 }
 
 .welcome {
@@ -42,12 +49,19 @@
 }
 
 .space {
-  padding-left: 6px;
+  padding-left: 4px;
+}
+
+.spacer {
+  padding-left: 120px;
+  padding-bottom: 100px;
 }
 
 .guy2 {
-  margin-top: 140vh;
+  margin-top: 17.5vh;
+  margin-left: 60vw;
+  transition: transform 0.2s; /* Animation */
   width: auto;
-  height: 180px;
+  height: 600px;
   position: absolute;
 }
