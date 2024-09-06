@@ -54,6 +54,14 @@ function SignUpPage() {
             // value={newUserName}
             // onChange={e => setNewUserName(e.target.value)}
           />
+          <label>Geburtsdatum</label>
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="TT.MM.JJJJ"
+            // value={newUserName}
+            // onChange={e => setNewUserName(e.target.value)}
+          />
           <label>E-Mail</label>
           <input
             className={styles.input}

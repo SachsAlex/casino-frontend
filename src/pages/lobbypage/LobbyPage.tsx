@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import slots from "../../mediathek/images/slot.webp";
 import blackjack from "../../mediathek/images/karte.webp";
 import roulette from "../../mediathek/images/roulette.webp";
-import exit from "../../mediathek/images/ausgang.png";
+import exit from "../../mediathek/images/ausgang_1.webp";
+import bank from "../../mediathek/images/casino-chip.webp";
 
 // Extra Satz: Sollten Sie Hilfe (Link) benötigen, bin ich jederzeit für Sie da!
 
@@ -15,8 +16,22 @@ function LobbyPage() {
   const handleExit = () => {
     navigate("/");
   };
+
+  const handleBank = () => {
+    navigate("/bank");
+  };
+
   return (
     <div className={styles.background}>
+      <div className="">
+        <img
+          className={styles.bank}
+          src={bank}
+          alt="Icon Bank"
+          onClick={handleBank}
+          title="Go to the Cashier"
+        />
+      </div>
       <div className="">
         <img
           className={styles.blackjack}
