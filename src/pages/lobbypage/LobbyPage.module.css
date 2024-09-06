@@ -6,8 +6,8 @@
   width: 100vw;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .mainContainer {
@@ -21,8 +21,8 @@
   display: flex;
   flex-direction: row;
   position: absolute;
+  margin-left: 54vw;
   margin-top: -25vh;
-  margin-left: 4vw;
   background-color: var(--primary-color);
   border-radius: 15px;
   padding: 12px;
@@ -59,9 +59,39 @@
 
 .guy2 {
   margin-top: 17.5vh;
-  margin-left: 60vw;
-  transition: transform 0.2s; /* Animation */
+  margin-left: 160vw;
   width: auto;
   height: 600px;
   position: absolute;
+}
+
+.blackjack {
+  height: 8vh;
+  margin-top: 51vh;
+  margin-left: 20vw;
+  position: absolute;
+}
+
+.slots {
+  height: 8vh;
+  margin-top: 45vh;
+  margin-left: 27vw;
+  position: absolute;
+}
+
+.roulette {
+  height: 9vh;
+  margin-top: 60vh;
+  margin-left: 48.3vw;
+  position: absolute;
+}
+
+.exit {
+  height: 15vh;
+  margin-top: 5vh;
+  margin-left: 90vw;
+  position: absolute;
+  &:hover {
+    cursor: pointer;
+  }
 }

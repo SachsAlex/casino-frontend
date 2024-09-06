@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../components/common/buttons";
 import styles from "./SignUpPage.module.css";
 
+// Anmeldeformular im IPad Design
+
 function SignUpPage() {
   // const [newUserName, setNewUserName] = useState("");
   // const [newVorName, setNewVorName] = useState("");

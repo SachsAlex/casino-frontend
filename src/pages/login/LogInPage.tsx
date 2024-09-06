@@ -24,7 +24,7 @@ function LogInPage() {
   const handleConfirm = () => {
     navigate("/lobby");
   };
-
+  // Design eines Casino Chips mit MCLX Münze und faker-Nummer (untraceable)
   return (
     <div className={styles.background}>
       <div className={styles.outerContainer}>
