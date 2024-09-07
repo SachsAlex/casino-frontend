@@ -50,7 +50,7 @@ function LobbyPage() {
         <div>
           <div className={styles.speechBubble}>
             <div className={styles.welcome}>
-              <div className={styles.space}> Willkommen im Casino MCXL. </div>
+              <div className={styles.space}> Willkommen im Casino MCLX. </div>
               <div className={styles.space}>
                 Was ist Ihr Spiel am heutigen Abend?
               </div>

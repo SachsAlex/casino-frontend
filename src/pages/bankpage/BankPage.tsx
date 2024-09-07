@@ -43,7 +43,7 @@ function LobbyPage() {
           <div className={styles.speechBubble}>
             <div className={styles.welcome}>
               <div className={styles.space}>Willkommen im VIP Bereich</div>
-              <div className={styles.space}>der MCXL Bank.</div>
+              <div className={styles.space}>der MCLX Bank.</div>
               <Button
                 onClick={redirectToSignUp}
                 text="Wollen Sie Ihre Chips speichern"

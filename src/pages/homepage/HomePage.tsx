@@ -37,7 +37,7 @@ function HomePage() {
               <div className={styles.welcome}>
                 <div className={styles.space}>
                   {" "}
-                  Willkommen beim Casino MCXL.{" "}
+                  Willkommen beim Casino MCLX.{" "}
                 </div>
                 <Button
                   onClick={redirectToSignUp}
