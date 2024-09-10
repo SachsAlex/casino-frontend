@@ -29,6 +29,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  font-family: "Tenor Sans", sans-serif;
   color: var(--primary-color);
 }
 
@@ -46,6 +47,15 @@
   position: absolute;
 }
 
+.fakeId {
+  font-family: "Tenor Sans", sans-serif;
+  margin-top: 19vh;
+  margin-left: 25vw;
+  color: var(--secondary-color);
+  z-index: 99;
+  position: absolute;
+}
+
 .button {
   display: flex;
   flex-direction: row;
@@ -56,6 +66,7 @@
 }
 
 .input {
+  font-family: "Tenor Sans", sans-serif;
   border-radius: 6px;
   text-align: center;
 }

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../components/common/buttons";
 import styles from "./LogInPage.module.css";
 import logo from "../../mediathek/images/MCLX.webp";
+import { faker } from "@faker-js/faker";
 
 function LogInPage() {
   // const [userName, setUsername] = useState("");
@@ -25,19 +26,22 @@ function LogInPage() {
   const handleConfirm = () => {
     navigate("/lobby");
   };
-  // Design eines Casino Chips mit MCLX Münze und faker-Nummer (untraceable)
+
+  const idNum = faker.number.int(50000);
+
   return (
     <div className={styles.background}>
       <img className={styles.logoleft} src={logo} alt="LogoLeft" />
       <img className={styles.logoright} src={logo} alt="LogoRight" />
+      <label className={styles.fakeId}>#{idNum}</label>
       <div className={styles.outerContainer}>
         <div className={styles.innerContainer}>
           <br />
-          <label>UserName:</label>
+          <label>Username:</label>
           <input
             className={styles.input}
             // onSubmit={handleLogin}
-            placeholder="UserName"
+            placeholder="Username"
             type="Username"
             // value={userName}
             // onChange={e => setUsername(e.target.value)}
