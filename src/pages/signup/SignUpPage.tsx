@@ -6,8 +6,6 @@ import styles from "./SignUpPage.module.css";
 
 function SignUpPage() {
   // const [newUserName, setNewUserName] = useState("");
-  // const [newVorName, setNewVorName] = useState("");
-  // const [newNachName, setNewNachName] = useState("");
   // const [newEmail, setNewEmail] = useState("");
   // const [newPassword, setNewPassword] = useState("");
   // const [confirmPassword, setConfirmPassword] = useState("");

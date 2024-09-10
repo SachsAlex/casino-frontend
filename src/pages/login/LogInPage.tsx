@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/common/buttons";
 import styles from "./LogInPage.module.css";
+import logo from "../../mediathek/images/MCLX.webp";
 
 function LogInPage() {
   // const [userName, setUsername] = useState("");
@@ -27,15 +28,17 @@ function LogInPage() {
   // Design eines Casino Chips mit MCLX Münze und faker-Nummer (untraceable)
   return (
     <div className={styles.background}>
+      <img className={styles.logoleft} src={logo} alt="LogoLeft" />
+      <img className={styles.logoright} src={logo} alt="LogoRight" />
       <div className={styles.outerContainer}>
         <div className={styles.innerContainer}>
           <br />
-          <label>E-Mail:</label>
+          <label>UserName:</label>
           <input
             className={styles.input}
             // onSubmit={handleLogin}
-            placeholder="E-Mail"
-            type="E-Mail"
+            placeholder="UserName"
+            type="Username"
             // value={userName}
             // onChange={e => setUsername(e.target.value)}
             required
