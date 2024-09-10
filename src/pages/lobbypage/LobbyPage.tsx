@@ -7,6 +7,7 @@ import blackjack from "../../mediathek/images/karte.webp";
 import roulette from "../../mediathek/images/roulette.webp";
 import exit from "../../mediathek/images/ausgang_1.webp";
 import bank from "../../mediathek/images/casino-chip.webp";
+import help from "../../mediathek/images/hilfe.webp";
 
 // Extra Satz: Sollten Sie Hilfe (Link) benötigen, bin ich jederzeit für Sie da!
 
@@ -19,6 +20,10 @@ function LobbyPage() {
 
   const handleBank = () => {
     navigate("/bank");
+  };
+
+  const handleHelp = () => {
+    navigate("/help");
   };
 
   return (
@@ -72,6 +77,15 @@ function LobbyPage() {
           alt="Icon Exit"
           onClick={handleExit}
           title="Back to Main Entrance"
+        />
+      </div>
+      <div className="">
+        <img
+          className={styles.help}
+          src={help}
+          alt="Icon Help"
+          onClick={handleHelp}
+          title="Go to get Help"
         />
       </div>
     </div>

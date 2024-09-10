@@ -103,3 +103,13 @@
     cursor: pointer;
   }
 }
+
+.help {
+  height: 12vh;
+  margin-top: 80vh;
+  margin-left: 92vw;
+  position: absolute;
+  &:hover {
+    cursor: pointer;
+  }
+}
