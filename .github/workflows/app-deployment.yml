@@ -32,10 +32,3 @@ jobs:
       - name: Prettier Code
         run: |
           npm run prettier
-
-    deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Start App
-        run: |
-          npm run start
