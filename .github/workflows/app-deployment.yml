@@ -3,28 +3,37 @@ name: Casino Deployment
 on: workflow_dispatch
 
 jobs:
-  install:
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '21'
+
+    install:
     runs-on: ubuntu-latest
     steps:
       - name: Install Node Packages
         run: |
           npm install
 
-  lint:
+    lint:
     runs-on: ubuntu-latest
     steps:
       - name: Linting Code
         run: |
           npm run lint
 
-  prettier:
+    prettier:
     runs-on: ubuntu-latest
     steps:
       - name: Prettier Code
         run: |
           npm run prettier
 
-  deploy:
+    deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Start App
