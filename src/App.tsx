@@ -8,6 +8,7 @@ import SignUpPage from "./pages/signup";
 import LobbyPage from "./pages/lobbypage";
 import BankPage from "./pages/bankpage";
 import HelpPage from "./pages/helppage";
+import HighscorePage from "./pages/highscorepage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/lobby" element={<LobbyPage />} />
       <Route path="/bank" element={<BankPage />} />
       <Route path="/help" element={<HelpPage />} />
+      <Route path="/highscore" element={<HighscorePage />} />
     </Routes>
   );
 }

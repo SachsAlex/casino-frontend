@@ -1,5 +1,5 @@
 import React from "react";
-import { linkData } from "../../lib/LinkData";
+import { linkData } from "../../../lib/LinkData";
 import styles from "./Links.module.css";
 import "@fontsource/tenor-sans";
 

@@ -19,8 +19,8 @@ function LobbyPage() {
     navigate("/lobby");
   };
 
-  const redirectToLogin = () => {
-    navigate("/login");
+  const redirectToHighscore = () => {
+    navigate("/highscore");
   };
   const redirectToSignUp = () => {
     navigate("/signup");
@@ -51,7 +51,7 @@ function LobbyPage() {
                 className=""
               />
               <Button
-                onClick={redirectToLogin}
+                onClick={redirectToHighscore}
                 text="oder Ihren Highscore einsehen?"
                 id="2"
                 className=""
