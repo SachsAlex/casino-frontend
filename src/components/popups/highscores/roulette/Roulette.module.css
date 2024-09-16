@@ -33,10 +33,72 @@
   padding-top: 15px;
 }
 
-.fragen {
-  color: black;
+.topscore {
+  color: violet;
+  animation: changeColorTopScore 1s infinite alternate;
 }
 
-.antworten {
-  padding-bottom: 12px;
+.second {
+  color: cyan;
+  animation: changeColorSecond 1s infinite alternate;
+}
+
+.third {
+  color: gold;
+  animation: changeColorThird 1s infinite alternate;
+}
+
+.forth {
+  color: silver;
+  animation: changeColorFourth 1s infinite alternate;
+}
+
+.fifth {
+  color: coral;
+  animation: changeColorFifth 1s infinite alternate;
+}
+
+@keyframes changeColorTopScore {
+  from {
+    color: violet;
+  }
+  to {
+    color: cyan;
+  }
+}
+
+@keyframes changeColorSecond {
+  from {
+    color: cyan;
+  }
+  to {
+    color: gold;
+  }
+}
+
+@keyframes changeColorThird {
+  from {
+    color: gold;
+  }
+  to {
+    color: silver;
+  }
+}
+
+@keyframes changeColorFourth {
+  from {
+    color: silver;
+  }
+  to {
+    color: coral;
+  }
+}
+
+@keyframes changeColorFifth {
+  from {
+    color: coral;
+  }
+  to {
+    color: violet;
+  }
 }
