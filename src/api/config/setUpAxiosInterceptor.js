@@ -2,7 +2,7 @@ import TokenHandler from "../../utils/TokenHandler";
 import api from "./api";
 
 function setUpAxiosInterceptor() {
-  api.interceptors.request.use((config) => {
+  api.interceptors.request.use(config => {
     const token = TokenHandler.getAccessToken();
     if (token) {
       config.headers["x-access-token"] = token;

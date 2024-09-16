@@ -2,10 +2,9 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../components/common/buttons";
 import styles from "./SignUpPage.module.css";
 
-// Anmeldeformular im IPad Design
-
 function SignUpPage() {
   // const [newUserName, setNewUserName] = useState("");
+  // const [dob, setDob] = useState("");
   // const [newEmail, setNewEmail] = useState("");
   // const [newPassword, setNewPassword] = useState("");
   // const [confirmPassword, setConfirmPassword] = useState("");
@@ -25,9 +24,15 @@ function SignUpPage() {
   //     setError("Passwörter stimmen nicht überein");
   //     return;
   //   }
+  //   const newAge = calculate_age(dob)
+  //   if (newAge < 18 ) {
+  //     setError("Sie sind zu jung für diese App");
+  //     return;
+  //   }
   //   try {
   //     const profile = await AuthMutations.createUser(
   //       newUserName,
+  //       newAge,
   //       newEmail,
   //       newPassword
   //     );
@@ -38,6 +43,13 @@ function SignUpPage() {
   //     // Hier können Sie eine Fehlermeldung anzeigen
   //   }
   // };
+
+  // function calculate_age(dob) {
+  //   var diff_ms = Date.now() - dob.getTime();
+  //   var age_dt = new Date(diff_ms);
+
+  //   return Math.abs(age_dt.getUTCFullYear() - 1970);
+  // }
 
   return (
     <div className={styles.background}>
@@ -56,9 +68,9 @@ function SignUpPage() {
           <input
             className={styles.input}
             type="text"
-            placeholder="TT.MM.JJJJ"
-            // value={newUserName}
-            // onChange={e => setNewUserName(e.target.value)}
+            placeholder="YYYY,MM,DD"
+            // value={dob}
+            // onChange={e => setDob(e.target.value)}
           />
           <label>E-Mail</label>
           <input

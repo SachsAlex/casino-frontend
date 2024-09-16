@@ -1,8 +1,22 @@
 import api from "../../config/api";
 
-async function updateUser(userName, userId, vorName, nachName, email, password) {
+async function updateUser(
+  userName,
+  userId,
+  vorName,
+  nachName,
+  email,
+  password,
+) {
   try {
-    const result = await api.put("/update", { userName, userId, vorName, nachName, email, password });
+    const result = await api.put("/update", {
+      userName,
+      userId,
+      vorName,
+      nachName,
+      email,
+      password,
+    });
     const updatedProfile = result.data.updatedProfile;
     return updatedProfile;
   } catch (error) {
