@@ -7,6 +7,7 @@ import lobby from "../../mediathek/images/casino-chips.webp";
 import Button from "../../components/common/buttons";
 import { useContext } from "react";
 import UserContext from "../../components/common/userContext";
+import { AxiosError } from "axios";
 
 // Extra Satz: Sollten Sie Hilfe (Link) benötigen, bin ich jederzeit für Sie da!
 
@@ -21,9 +22,12 @@ function LobbyPage() {
       await logOutUser();
       console.log("User wurder erfolgreich ausgeloggt");
       navigate("/");
-    } catch (e: any) {
-      //TypeError?
-      console.error("Fehler beim Ausloggen:", e);
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        console.error("Fehler beim Ausloggen:", error.message);
+      } else {
+        console.error("Unbekannter Fehler beim Ausloggen:", error);
+      }
     }
   };
 

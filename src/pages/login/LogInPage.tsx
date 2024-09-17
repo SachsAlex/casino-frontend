@@ -12,10 +12,11 @@ function LogInPage() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e: any) => {
-    e.preventDefault();
+  const handleLogin = async () => {
+    console.log("Login Funktion");
     try {
       await logInUser(userName, password);
+      console.log("UserName und so");
       navigate("/lobby");
     } catch (error) {
       if (error instanceof TypeError) {
@@ -64,7 +65,7 @@ function LogInPage() {
           <div className={styles.button}>
             <Button
               text={"Bestätigen"}
-              onClick={handleLogin}
+              onClick={handleLogin} //Arrow Function durch e.preventDefault
               id=""
               className={styles.buttonplus}
             />{" "}

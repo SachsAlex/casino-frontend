@@ -9,17 +9,25 @@ import LobbyPage from "./pages/lobbypage";
 import BankPage from "./pages/bankpage";
 import HelpPage from "./pages/helppage";
 import HighscorePage from "./pages/highscorepage";
+import PublicRoute from "./utils/routes/public/public";
+import PrivateRoute from "./utils/routes/private/private";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<LogInPage />} />
-      <Route path="/signup" element={<SignUpPage />} />
-      <Route path="/lobby" element={<LobbyPage />} />
-      <Route path="/bank" element={<BankPage />} />
-      <Route path="/help" element={<HelpPage />} />
-      <Route path="/highscore" element={<HighscorePage />} />
+      {/* Öffentliche Routen */}
+      <Route element={<PublicRoute />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LogInPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+      </Route>
+      {/* Geschützte Routen */}
+      <Route element={<PrivateRoute />}>
+        <Route path="/lobby" element={<LobbyPage />} />
+        <Route path="/bank" element={<BankPage />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/highscore" element={<HighscorePage />} />
+      </Route>
     </Routes>
   );
 }

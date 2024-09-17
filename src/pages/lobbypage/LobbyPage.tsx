@@ -10,6 +10,7 @@ import bank from "../../mediathek/images/casino-chip.webp";
 import help from "../../mediathek/images/hilfe.webp";
 import UserContext from "../../components/common/userContext";
 import { useContext } from "react";
+import { AxiosError } from "axios";
 
 // Extra Satz: Sollten Sie Hilfe (Link) benötigen, bin ich jederzeit für Sie da!
 
@@ -24,7 +25,7 @@ function LobbyPage() {
       console.log("User wurder erfolgreich ausgeloggt");
       navigate("/");
     } catch (error) {
-      if (error instanceof TypeError) {
+      if (error instanceof AxiosError) {
         console.error("Fehler beim Ausloggen:", error.message);
       } else {
         console.error("Unbekannter Fehler beim Ausloggen:", error);

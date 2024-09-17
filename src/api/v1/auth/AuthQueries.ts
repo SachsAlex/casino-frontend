@@ -1,7 +1,7 @@
 import TokenHandler from "../../../utils/TokenHandler";
 import api from "../../config/api";
 
-async function loginUser(userName, password) {
+async function loginUser(userName: string, password: string) {
   try {
     const result = await api.post("/auth/login", {
       userName,

@@ -1,6 +1,6 @@
 import api from "../../config/api";
 
-async function deleteUser(userId) {
+async function deleteUser(userId: Number) {
   try {
     const result = await api.delete("/delete", { data: { userId } });
     const deletedUserId = result.data.deletedUserId;

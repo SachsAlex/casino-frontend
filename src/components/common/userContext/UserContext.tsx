@@ -70,6 +70,7 @@ export const UserProvider = ({ children }: Props) => {
       setUser(response.user);
     } else fetchUserData();
   };
+
   useEffect(() => {
     fetchUserData();
   }, []);

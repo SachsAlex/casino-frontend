@@ -1,12 +1,14 @@
 import styles from "./HomePage.module.css";
 import guy from "../../mediathek/images/Carsten05b2.webp";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "../../components/common/buttons";
 import { useNavigate } from "react-router-dom";
+import UserContext from "../../components/common/userContext";
 
 function HomePage() {
   const [speechBubble, setSpeechBubble] = useState(false);
   const [bigGuy, setBigGuy] = useState(false);
+  const user = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -20,6 +22,7 @@ function HomePage() {
   function onClick() {
     setSpeechBubble(!speechBubble);
     setBigGuy(!bigGuy);
+    console.log(user);
   }
 
   return (

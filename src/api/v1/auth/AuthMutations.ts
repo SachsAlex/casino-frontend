@@ -1,6 +1,11 @@
 import api from "../../config/api";
 
-async function createUser(userName, dob, email, password) {
+async function createUser(
+  userName: string,
+  dob: string,
+  email: string,
+  password: string,
+) {
   try {
     console.log("Hier folgt das result");
     const result = await api.post("auth/signup", {
