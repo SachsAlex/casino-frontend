@@ -3,28 +3,31 @@ import Button from "../../components/common/buttons";
 import styles from "./LogInPage.module.css";
 import logo from "../../mediathek/images/MCLX.webp";
 import { faker } from "@faker-js/faker";
+import { useContext, useState } from "react";
+import UserContext from "../../components/common/userContext";
 
 function LogInPage() {
-  // const [userName, setUsername] = useState("");
-  // const { logInUser } = useContext(UserContext);
-  // const [password, setPassword] = useState("");
+  const [userName, setUsername] = useState("");
+  const { logInUser } = useContext(UserContext);
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  // const handleLogin = async e => {
-  //   e.preventDefault();
-  //   try {
-  //     await logInUser(userName, password);
-  //   } catch (error) {
-  //     console.error("Fehler beim Einloggen:", error);
-  //   }
-  // };
+  const handleLogin = async (e: any) => {
+    e.preventDefault();
+    try {
+      await logInUser(userName, password);
+      navigate("/lobby");
+    } catch (error) {
+      if (error instanceof TypeError) {
+        console.error("Fehler beim Einloggen:", error.message);
+      } else {
+        console.error("Unbekannter Fehler beim Einloggen:", error);
+      }
+    }
+  };
 
   const handleCancel = () => {
     navigate("/");
-  };
-
-  const handleConfirm = () => {
-    navigate("/lobby");
   };
 
   const idNum = faker.number.int(50000);
@@ -40,11 +43,11 @@ function LogInPage() {
           <label>Username:</label>
           <input
             className={styles.input}
-            // onSubmit={handleLogin}
+            onSubmit={handleLogin}
             placeholder="Username"
             type="Username"
-            // value={userName}
-            // onChange={e => setUsername(e.target.value)}
+            value={userName}
+            onChange={e => setUsername(e.target.value)}
             required
           />
 
@@ -53,15 +56,15 @@ function LogInPage() {
             className={styles.input}
             placeholder="Password"
             type="password"
-            // value={password}
-            // onChange={e => setPassword(e.target.value)}
+            value={password}
+            onChange={e => setPassword(e.target.value)}
             required
           />
           <br />
           <div className={styles.button}>
             <Button
               text={"Bestätigen"}
-              onClick={handleConfirm}
+              onClick={handleLogin}
               id=""
               className={styles.buttonplus}
             />{" "}

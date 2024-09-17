@@ -8,14 +8,28 @@ import roulette from "../../mediathek/images/roulette.webp";
 import exit from "../../mediathek/images/ausgang_1.webp";
 import bank from "../../mediathek/images/casino-chip.webp";
 import help from "../../mediathek/images/hilfe.webp";
+import UserContext from "../../components/common/userContext";
+import { useContext } from "react";
 
 // Extra Satz: Sollten Sie Hilfe (Link) benötigen, bin ich jederzeit für Sie da!
 
 function LobbyPage() {
   const navigate = useNavigate();
+  const { logOutUser } = useContext(UserContext);
 
-  const handleExit = () => {
-    navigate("/");
+  const handleLogout = async (e: any) => {
+    e.preventDefault();
+    try {
+      await logOutUser();
+      console.log("User wurder erfolgreich ausgeloggt");
+      navigate("/");
+    } catch (error) {
+      if (error instanceof TypeError) {
+        console.error("Fehler beim Ausloggen:", error.message);
+      } else {
+        console.error("Unbekannter Fehler beim Ausloggen:", error);
+      }
+    }
   };
 
   const handleBank = () => {
@@ -75,7 +89,7 @@ function LobbyPage() {
           className={styles.exit}
           src={exit}
           alt="Icon Exit"
-          onClick={handleExit}
+          onClick={handleLogout}
           title="Back to Main Entrance"
         />
       </div>

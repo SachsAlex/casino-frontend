@@ -5,14 +5,26 @@ import { useNavigate } from "react-router-dom";
 import exit from "../../mediathek/images/ausgang_1.webp";
 import lobby from "../../mediathek/images/casino-chips.webp";
 import Button from "../../components/common/buttons";
+import { useContext } from "react";
+import UserContext from "../../components/common/userContext";
 
 // Extra Satz: Sollten Sie Hilfe (Link) benötigen, bin ich jederzeit für Sie da!
 
 function LobbyPage() {
   const navigate = useNavigate();
 
-  const handleExit = () => {
-    navigate("/");
+  const { logOutUser } = useContext(UserContext);
+
+  const handleLogout = async (e: any) => {
+    e.preventDefault();
+    try {
+      await logOutUser();
+      console.log("User wurder erfolgreich ausgeloggt");
+      navigate("/");
+    } catch (e: any) {
+      //TypeError?
+      console.error("Fehler beim Ausloggen:", e);
+    }
   };
 
   const handleLobby = () => {
@@ -65,7 +77,7 @@ function LobbyPage() {
           className={styles.exit}
           src={exit}
           alt="Icon Exit"
-          onClick={handleExit}
+          onClick={handleLogout}
           title="Back to Main Entrance"
         />
       </div>

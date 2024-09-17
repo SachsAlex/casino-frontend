@@ -1,14 +1,17 @@
 import api from "../../config/api";
 
-async function createUser(newUserName, newEmail, newPassword) {
+async function createUser(userName, dob, email, password) {
   try {
+    console.log("Hier folgt das result");
     const result = await api.post("auth/signup", {
-      newUserName,
-      newEmail,
-      newPassword,
+      userName,
+      dob,
+      email,
+      password,
     });
-    const profile = result.data.profile;
-    return profile;
+    const newUser = result.data.user;
+    console.log("NewUser: ", newUser);
+    return newUser;
   } catch (error) {
     console.error("Fehler beim Registrieren:", error);
     throw error;

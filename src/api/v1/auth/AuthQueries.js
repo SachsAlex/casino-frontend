@@ -3,11 +3,13 @@ import api from "../../config/api";
 
 async function loginUser(userName, password) {
   try {
-    const result = await api.get("/auth/login", {
-      params: { userName, password },
+    const result = await api.post("/auth/login", {
+      userName,
+      password,
     });
     const data = result.data;
-    TokenHandler.saveAcccessToken(data.accessToken);
+    console.log("AccesToken Data? ", data);
+    TokenHandler.saveAccessToken(data.tokens.accessToken);
 
     return data;
   } catch (error) {

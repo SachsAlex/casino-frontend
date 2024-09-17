@@ -1,7 +1,7 @@
 import api from "../../config/api";
 
 export async function fetchAllUser() {
-  const result = await api.get("/user/all");
+  const result = await api.get("/users/all");
 
   const users = result.data;
 
@@ -9,11 +9,11 @@ export async function fetchAllUser() {
 }
 
 export async function fetchCurrentUser() {
-  const result = await api.get("/user/currrentuser");
+  const result = await api.get("/users/currentuser");
 
   const reponse = result.data;
 
-  console.log("Mein user /currentuser", reponse);
+  console.log("Mein users /currentuser", reponse);
 
   return reponse;
 }

@@ -10,7 +10,7 @@ function setUpAxiosInterceptor() {
       console.log("TOKEN not available yet");
     }
 
-    console.log("this is my Iterceptor header", config.headers);
+    console.log("this is my Interceptor header", config.headers);
     return config;
   });
 }
