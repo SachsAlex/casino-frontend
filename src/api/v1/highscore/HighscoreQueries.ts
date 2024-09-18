@@ -8,7 +8,7 @@ async function fetchAllHighscore() {
   return highscore;
 }
 
-async function fetchHighscoreById(id) {
+async function fetchHighscoreById(id: Number) {
   const result = await api.get("/highscore/byid", { params: { id } });
 
   const highscore = result.data.id;
@@ -18,7 +18,7 @@ async function fetchHighscoreById(id) {
   return highscore;
 }
 
-async function fetchByUserId(userId) {
+async function fetchByUserId(userId: Number) {
   const result = await api.get("/highscore/byuserid", { params: { userId } });
 
   const user = result.data.userId;
@@ -28,7 +28,7 @@ async function fetchByUserId(userId) {
   return user;
 }
 
-async function fetchByGameId(gameId) {
+async function fetchByGameId(gameId: Number) {
   const result = await api.get("/highscore/bygameid", { params: { gameId } });
 
   const game = result.data.gameId;
@@ -38,7 +38,7 @@ async function fetchByGameId(gameId) {
   return game;
 }
 
-async function fetchTop5(userId, gameId) {
+async function fetchTop5(userId: Number, gameId: Number) {
   const result = await api.get("/highscore/update", {
     params: { userId, gameId },
   });
