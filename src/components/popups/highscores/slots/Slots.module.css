@@ -33,27 +33,27 @@
   padding-top: 15px;
 }
 
-.topscore {
+.score0 {
   color: violet;
   animation: changeColorTopScore 1s infinite alternate;
 }
 
-.second {
+.score1 {
   color: cyan;
   animation: changeColorSecond 1s infinite alternate;
 }
 
-.third {
+.score2 {
   color: gold;
   animation: changeColorThird 1s infinite alternate;
 }
 
-.forth {
+.score3 {
   color: silver;
   animation: changeColorFourth 1s infinite alternate;
 }
 
-.fifth {
+.score4 {
   color: coral;
   animation: changeColorFifth 1s infinite alternate;
 }

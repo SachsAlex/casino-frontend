@@ -15,7 +15,6 @@ async function createUser(
       password,
     });
     const newUser = result.data.user;
-    console.log("NewUser: ", newUser);
     return newUser;
   } catch (error) {
     console.error("Fehler beim Registrieren:", error);

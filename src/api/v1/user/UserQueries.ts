@@ -13,8 +13,6 @@ export async function fetchCurrentUser() {
 
   const reponse = result.data;
 
-  console.log("Mein users /currentuser", reponse);
-
   return reponse;
 }
 

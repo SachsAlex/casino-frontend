@@ -1,11 +1,15 @@
 import api from "../../config/api";
 
-async function createHighscore(newHighscore, newGameId, newUserId) {
+async function createHighscore(
+  newHighscore: Number,
+  newGameId: Number,
+  newUserName: String,
+) {
   try {
-    const result = await api.post("/highscore/create", {
+    const result = await api.post("/highscores/create", {
       newHighscore,
       newGameId,
-      newUserId,
+      newUserName,
     });
     const profile = result.data.profile;
     return profile;
@@ -15,9 +19,9 @@ async function createHighscore(newHighscore, newGameId, newUserId) {
   }
 }
 
-async function deleteHighscore(id) {
+async function deleteHighscore(id: Number) {
   try {
-    const result = await api.delete("/highscore/delete", { data: { id } });
+    const result = await api.delete("/highscores/delete", { data: { id } });
     const deleteId = result.data.deletedId;
     return deleteId;
   } catch (error) {

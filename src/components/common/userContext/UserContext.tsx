@@ -12,6 +12,7 @@ interface Props {
 type AuthUser = {
   userName: string;
   password: string;
+  id: number;
 };
 
 interface UserContextProps {
@@ -29,8 +30,6 @@ const defaultUserContext: UserContextProps = {
   },
   user: null,
 };
-const unauthenticatedRoutes = ["/login", "/signup", "/"];
-console.log("Tokenfreier Zugang für: ", unauthenticatedRoutes);
 
 //Context-Objekt für den Benutzerstatus
 const UserContext = createContext<UserContextProps>(defaultUserContext);

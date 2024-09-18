@@ -8,7 +8,6 @@ async function loginUser(userName: string, password: string) {
       password,
     });
     const data = result.data;
-    console.log("AccesToken Data? ", data);
     TokenHandler.saveAccessToken(data.tokens.accessToken);
 
     return data;
