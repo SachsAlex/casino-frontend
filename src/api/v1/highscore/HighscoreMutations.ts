@@ -6,6 +6,9 @@ async function createHighscore(
   newUserName: String,
 ) {
   try {
+    console.log("user new: ", newUserName);
+    console.log("score new: ", newHighscore);
+    console.log("gameId new: ", newGameId);
     const result = await api.post("/highscores/create", {
       newHighscore,
       newGameId,

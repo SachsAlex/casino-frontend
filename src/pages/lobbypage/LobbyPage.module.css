@@ -68,6 +68,9 @@
   margin-top: 51vh;
   margin-left: 20vw;
   position: absolute;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .slots {

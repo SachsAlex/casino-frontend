@@ -16,10 +16,12 @@ async function fetchHighscoreById(id: Number) {
   return highscore;
 }
 
-async function fetchByUserId(userId: Number) {
-  const result = await api.get("/highscores/byuserid", { params: { userId } });
+async function fetchByUserId(userName: String) {
+  const result = await api.get("/highscores/byuserid", {
+    params: { userName },
+  });
 
-  const user = result.data.userId;
+  const user = result.data.userName;
 
   return user;
 }
@@ -32,9 +34,9 @@ async function fetchByGameId(gameId: Number) {
   return game;
 }
 
-async function fetchTop5(userId: Number, gameId: Number) {
+async function fetchTop5(userName: String, gameId: Number) {
   const result = await api.get("/highscores/update", {
-    params: { userId, gameId },
+    params: { userName, gameId },
   });
 
   const top5 = result.data;

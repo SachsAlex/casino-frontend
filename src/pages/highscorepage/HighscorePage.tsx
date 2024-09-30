@@ -6,7 +6,7 @@ import Popup from "reactjs-popup";
 import Blackjack from "../../components/popups/highscores/blackjack";
 import Slots from "../../components/popups/highscores/slots";
 import Roulette from "../../components/popups/highscores/roulette";
-import hsbj from "../../mediathek/images/casino-chips.webp";
+import hsbj from "../../mediathek/images/karte.webp";
 import hssl from "../../mediathek/images/slot.webp";
 import hsro from "../../mediathek/images/roulette.webp";
 

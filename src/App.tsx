@@ -11,6 +11,7 @@ import HelpPage from "./pages/helppage";
 import HighscorePage from "./pages/highscorepage";
 import PublicRoute from "./utils/routes/public/public";
 import PrivateRoute from "./utils/routes/private/private";
+import BlackJackPage from "./pages/blackjackpage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/bank" element={<BankPage />} />
         <Route path="/help" element={<HelpPage />} />
         <Route path="/highscore" element={<HighscorePage />} />
+        <Route path="/blackjack" element={<BlackJackPage />} />
       </Route>
     </Routes>
   );

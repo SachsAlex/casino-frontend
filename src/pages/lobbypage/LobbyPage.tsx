@@ -41,6 +41,10 @@ function LobbyPage() {
     navigate("/help");
   };
 
+  const handleBlackJack = () => {
+    navigate("/blackjack");
+  };
+
   return (
     <div className={styles.background}>
       <div className="">
@@ -57,6 +61,8 @@ function LobbyPage() {
           className={styles.blackjack}
           src={blackjack}
           alt="Icon BlackJack"
+          onClick={handleBlackJack}
+          title="Go to the BlackJack"
         />
       </div>
       <div className="">

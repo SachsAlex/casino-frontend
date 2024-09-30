@@ -13,7 +13,7 @@ function Blackjack() {
   const top5 = async () => {
     try {
       if (!user) return;
-      const score = await HighscoreQueries.fetchTop5(user.id, gameId);
+      const score = await HighscoreQueries.fetchTop5(user.userName, gameId);
       setTop5Array(score);
     } catch (error) {
       if (error instanceof AxiosError) {

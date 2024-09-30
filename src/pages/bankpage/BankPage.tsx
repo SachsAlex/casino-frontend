@@ -8,13 +8,14 @@ import Button from "../../components/common/buttons";
 import { useContext } from "react";
 import UserContext from "../../components/common/userContext";
 import { AxiosError } from "axios";
+import { HighscoreMutations } from "../../api/v1/highscore";
 
 // Extra Satz: Sollten Sie Hilfe (Link) benötigen, bin ich jederzeit für Sie da!
 
 function LobbyPage() {
   const navigate = useNavigate();
-
-  const { logOutUser } = useContext(UserContext);
+  const { user, logOutUser, score, gameId, saveHighscore, updateScore } =
+    useContext(UserContext);
 
   const handleLogout = async (e: any) => {
     e.preventDefault();
@@ -38,8 +39,13 @@ function LobbyPage() {
   const redirectToHighscore = () => {
     navigate("/highscore");
   };
-  const redirectToSignUp = () => {
-    navigate("/signup");
+
+  const handleSave = () => {
+    if (!user) return;
+    if (!score) return;
+    if (!gameId) return;
+    console.log("UpdateScore: ", score);
+    saveHighscore(score, gameId, user.userName);
   };
 
   return (
@@ -61,7 +67,7 @@ function LobbyPage() {
               <div className={styles.space}>Willkommen im VIP Bereich</div>
               <div className={styles.space}>der MCLX Bank.</div>
               <Button
-                onClick={redirectToSignUp}
+                onClick={handleSave}
                 text="Wollen Sie Ihre Chips speichern"
                 id="1"
                 className=""

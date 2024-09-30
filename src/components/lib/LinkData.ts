@@ -26,12 +26,10 @@ export const linkData = [
   },
   {
     name: "Hilfe-Icon",
-
     href: "https://www.flaticon.com/de/kostenloses-icon/hilfe_1790005?related_id=1789936&origin=search",
   },
   {
     name: "FAQs-Icon",
-
     href: "https://www.flaticon.com/de/kostenloses-icon/haufig-gestellte-fragen_8499414",
   },
   {
