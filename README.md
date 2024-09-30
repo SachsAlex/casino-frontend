@@ -23,6 +23,10 @@ Note that, if you want the full experience you will need the backend for this pr
 - [How/where to download your program](https://github.com/SachsAlex/casino-frontend.git)
 
 ```
+git clone https://github.com/SachsAlex/casino-frontend.git
+```
+
+```
 npm install
 ```
 
