@@ -12,6 +12,7 @@ import HighscorePage from "./pages/highscorepage";
 import PublicRoute from "./utils/routes/public/public";
 import PrivateRoute from "./utils/routes/private/private";
 import BlackJackPage from "./pages/blackjackpage";
+import PresiPage from "./pages/presipage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LogInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/presi" element={<PresiPage />} />
       </Route>
       {/* Geschützte Routen */}
       <Route element={<PrivateRoute />}>
