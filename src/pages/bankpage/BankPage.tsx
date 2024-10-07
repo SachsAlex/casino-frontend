@@ -46,6 +46,7 @@ function LobbyPage() {
     if (!gameId) return;
     console.log("UpdateScore: ", score);
     saveHighscore(score, gameId, user.userName);
+    alert("Score saved!");
   };
 
   return (

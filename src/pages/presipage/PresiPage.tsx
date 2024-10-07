@@ -16,9 +16,6 @@ function PresiPage() {
               <label className={styles.number}>IV.</label>
               <label className={styles.number}>V.</label>
               <label className={styles.number}>VI.</label>
-              <label className={styles.unterpunkt}>VI.I.</label>
-              <label className={styles.unterpunkt}>VI.II.</label>
-              <label className={styles.unterpunkt}>VI.III.</label>
               <label className={styles.number}>VII.</label>
               <label className={styles.number}>VIII.</label>
               <label className={styles.number}>IX.</label>
@@ -28,12 +25,9 @@ function PresiPage() {
               <label className={styles.title}>Vision Casino</label>
               <label className={styles.title}>Rechtliches</label>
               <label className={styles.title}>Technologien</label>
-              <label className={styles.title}>Casino Frontend</label>
-              <label className={styles.title}>Casino Backend</label>
+              <label className={styles.title}>Casino Architektur AWS</label>
+              <label className={styles.title}>Casino Architektur Azure</label>
               <label className={styles.title}>Spielevorstellung</label>
-              <label className={styles.unterpunkt}>BlackJack</label>
-              <label className={styles.unterpunkt}>Roulette</label>
-              <label className={styles.unterpunkt}>Slot Machine</label>
               <label className={styles.title}>Einbindung</label>
               <label className={styles.title}>Demonstration</label>
               <label className={styles.title}>Fragen</label>

@@ -20,8 +20,10 @@ function LogInPage() {
       navigate("/lobby");
     } catch (error) {
       if (error instanceof TypeError) {
+        alert("Unbekannter User oder falsches Passwort!");
         console.error("Fehler beim Einloggen:", error.message);
       } else {
+        alert("Unbekannter User oder falsches Passwort!");
         console.error("Unbekannter Fehler beim Einloggen:", error);
       }
     }
