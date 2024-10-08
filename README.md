@@ -67,8 +67,8 @@ Icons:
 
 - all icons used can be found under:
 
-.
-├── ...
+.<br />
+├── ...<br />
 ├── src                    
 │   ├── ...          
 │   ├── components    ├── ...               
