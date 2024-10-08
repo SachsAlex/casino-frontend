@@ -69,11 +69,11 @@ Icons:
 
 .<br />
 ├── ...<br />
-├── src                    
-│   ├── ...          
-│   ├── components    ├── ...               
-│   └── ...           └── lib    ├── LinkData.ts
-│   └── ...           └── ...   
+├── src <br />                   
+│   ├── ...       <br />   
+│   ├── components    ├── ...     <br />          
+│   └── ...           └── lib    ├── LinkData.ts <br />
+│   └── ...           └── ...   <br />
 └── ...
 
 - icons used in each specific game can be found in its own REAMDME.md
