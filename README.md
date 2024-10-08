@@ -71,9 +71,9 @@ Icons:
 ├── ...<br />
 ├── src <br />                   
 │   ├── ... <br />   
-│   ├── components    ├── ... <br />          
-│   └── ...           └── lib    ├── LinkData.ts <br />
-│   └── ...           └── ... <br />
+│   ├── components  ├── ... <br />          
+│   └── ...         └── lib    ├── LinkData.ts <br />
+│   └── ...         └── ... <br />
 └── ...
 
 - icons used in each specific game can be found in its own REAMDME.md
