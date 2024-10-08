@@ -70,10 +70,10 @@ Icons:
 .<br />
 ├── ...<br />
 ├── src <br />                   
-│   ├── ...       <br />   
-│   ├── components    ├── ...     <br />          
+│   ├── ... <br />   
+│   ├── components    ├── ... <br />          
 │   └── ...           └── lib    ├── LinkData.ts <br />
-│   └── ...           └── ...   <br />
+│   └── ...           └── ... <br />
 └── ...
 
 - icons used in each specific game can be found in its own REAMDME.md
