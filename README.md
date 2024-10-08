@@ -66,7 +66,7 @@ This project is licensed under the [MIT] License - see the LICENSE.md file for d
 Icons:
 
 - all icons used can be found under:
-
+<pre>
 .<br />
 ├── ...<br />
 ├── src<br />                   
@@ -75,5 +75,5 @@ Icons:
 │   └── ...         └── lib    ├── LinkData.ts<br />
 │   └── ...         └── ...<br />
 └── ...
-
+</pre>
 - icons used in each specific game can be found in its own REAMDME.md
