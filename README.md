@@ -38,6 +38,12 @@ npm install
 npm run start
 ```
 
+### User SignUp Note
+
+- the date of birth needs to fulfill the following criteria:
+
+YYYY,MM,DD - the commas need to be present as well as all the digits of the date
+
 ## Authors
 
 Contributors names and contact info
