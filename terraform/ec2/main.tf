@@ -16,6 +16,6 @@ resource "aws_instance" "my_instance" {
   associate_public_ip_address = true
 
   tags = {
-    Name = "MyInstance"
+    Name = "EC2-Casino-Frontend"
   }
 }
