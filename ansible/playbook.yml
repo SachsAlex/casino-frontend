@@ -1,0 +1,51 @@
+- name: Install GitHub on Ubuntu and Start the Backend
+  gather_facts: yes
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Add NodeSource GPG key
+      ansible.builtin.apt_key:
+        url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+        state: present
+
+    - name: Add NodeSource repository for Node.js 20.x (using jammy instead of noble)
+      ansible.builtin.apt_repository:
+        repo: "deb https://deb.nodesource.com/node_20.x jammy main"
+        state: present
+        update_cache: yes
+
+    - name: Install Node.js 20
+      ansible.builtin.apt:
+        name: nodejs
+        state: present
+        update_cache: yes
+
+    - name: Install build-essential (for npm modules compilation)
+      ansible.builtin.apt:
+        name: build-essential
+        state: present
+
+    - name: Ensure Git is installed
+      apt:
+        name: git
+        state: present
+
+    - name: Check Git version
+      shell: git -v
+      register: git_version_output
+
+    - name: Clone Repository
+      shell: git clone https://github.com/SachsAlex/casino-frontend.git
+
+    - name: Move to Repository
+      shell: cd ./casino-frontenc/
+
+    - name: npm install
+      shell: sudo npm install
+
+    - name: Run Backend
+      shell: npm run start
