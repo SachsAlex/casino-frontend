@@ -42,7 +42,7 @@
       shell: git clone https://github.com/SachsAlex/casino-frontend.git
 
     - name: Move to Repository
-      shell: cd ./casino-frontenc/
+      shell: cd ./casino-frontend/
 
     - name: npm install
       shell: sudo npm install
