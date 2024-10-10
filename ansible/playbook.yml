@@ -1,4 +1,4 @@
-- name: Install GitHub on Ubuntu and Start the Backend
+- name: Install GitHub on Ubuntu and Start the Frontend
   gather_facts: yes
   hosts: webservers
   become: yes
@@ -44,5 +44,5 @@
     - name: npm install
       shell: cd ./casino-frontend/ && sudo npm install
 
-    - name: Run Backend
+    - name: Run Frontend
       shell: cd ./casino-frontend/ && npm run start
