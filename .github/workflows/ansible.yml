@@ -1,0 +1,32 @@
+name: Deploy Ansible
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    name: Deploy Ansible Playbook
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.ANSIBLE_SSH_PRIVATE }}" > ~/.ssh/id_rsa
+          chmod 600  ~/.ssh/id_rsa
+
+      - name: Install Ansible
+        shell: bash
+        run: |
+          sudo apt update
+          sudo apt install -y ansible
+
+      - name: Run Ansible Playbook
+        env:
+          ANSIBLE_PRIVATE_KEY: ${{ secrets.ANSIBLE_SSH_PRIVATE }}
+          ANSIBLE_USER: ubuntu
+          ANSIBLE_HOST_KEY_CHECKING: False
+        run: |
+          ansible -i ./ansible/hosts.ini all -m ping
+          ansible-playbook -i ./ansible/hosts.ini ./ansible/playbook.yml
